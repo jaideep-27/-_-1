@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e272e; /* Dark background for the whole page */
+}
+
+.calculator {
+    width: 340px;
+    background-color: #576574; /* Lighter color for the calculator body */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    padding: 20px;
+}
+
+.display {
+    padding: 20px;
+    background-color: #2d3436; /* Darker display background */
+    color: white;
+    font-size: 28px;
+    text-align: right;
+    border-radius: 10px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2); /* 3D inset shadow */
+    overflow-x: auto; /* Allows scrolling if the equation is too long */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px; /* Space between buttons */
+}
+
+button {
+    padding: 20px;
+    font-size: 24px;
+    background-color: #6c5ce7; /* Base color for buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: all 0.2s ease; /* Smooth transition */
+}
+
+button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Pressed button effect */
+    transform: translateY(2px); /* Slight movement down on click */
+}
+
+button:hover {
+    background-color: #a29bfe; /* Lighter color on hover */
+}
+
+button:nth-child(4n+4) {
+    background-color: #ff7675; /* Operator buttons: Red */
+}
+
+button:nth-child(4n+4):hover {
+    background-color: #fab1a0; /* Lighter red on hover */
+}
+
+.zero {
+    grid-column: span 2; /* Span two columns for the zero button */
+}
+
